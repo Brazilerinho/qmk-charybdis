@@ -15,12 +15,12 @@
 #define LA_GFN MO(_GFN)
 
 #define QUOT S(KC_GRV)
-#define PIPE S(KC_BSLS)
-#define DPIPE S(RALT(KC_BSLS))
-#define SCLN S(KC_LBRC)
+#define PIPE S(KC_NUBS)
+#define DPIPE S(RALT(KC_NUBS))
+#define SCLN S(KC_BSLS)
 #define CLN S(KC_RBRC)
 #define GRV RALT(KC_GRV)
-#define BSL RALT(KC_BSLS)
+#define BSL RALT(KC_NUBS)
 #define NBSP  RALT(KC_SPC)
 
 #define SPACE_L S(G(KC_LEFT))
@@ -28,6 +28,8 @@
 
 #define TAB_L C(S(KC_TAB))
 #define TAB_R C(KC_TAB)
+#define LBRACE S(RALT(KC_DOT))
+#define RBRACE S(RALT(KC_SLSH))
 
 enum layers {
     _DEF,
@@ -65,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_ESC,       KC_A,       KC_S,       KC_D,       KC_F,       KC_G,                     KC_H,       KC_J,       KC_K,       KC_L,     KC_SCLN,    KC_QUOT,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │ MOUSE MID │     Z     │     X     │     C     │     V     │     B     │             │     N     │     M     │     &     │     [     │     ]     │     ]     │*/
-          KC_BTN3,     KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,                     KC_N,       KC_M,      KC_RBRC,    KC_DOT,     KC_SLSH,    KC_RBRC,
+          KC_BTN3,     KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,                     KC_N,       KC_M,      KC_COMM,    KC_DOT,     KC_SLSH,    KC_RBRC,
     /* └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘             └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘*/
     /*                                          ┌───────────┬───────────┬───────────┐   ┌───────────┬───────────┐                                                     */
     /*                                          │    NAV    │   SPACE   │ MOUSE LEFT│   │ ENT/RIGHT │   SHIFT   │                                                     */
@@ -128,14 +130,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* │     `     │           │           │           │           │           │             │           │           │           │           │           │           │*/  
             GRV,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,                     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │           │     !     │     @     │     #     │     $     │     %     │             │     ^     │     ?     │     *     │     (     │     )     │           │*/        
-           XXXX,       KC_1,       KC_2,       KC_3,       KC_4,       KC_5,                     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       XXXX,
+    /* │           │     !     │     @     │     #     │     $     │     %     │             │     ^     │     ?     │     *     │     (     │     )     │     |     │*/        
+          _______,    S(KC_1),    S(KC_2),    S(KC_3),    S(KC_4),    S(KC_5),                  S(KC_6),    S(KC_7),    S(KC_8),    S(KC_9),   S(KC_0),      PIPE,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │           │     ~     │     `     │     '     │     "     │     -     │             │     +     │STICK SHIFT│STICKY CTRL│STICKY ALT │STICKY WIN │           │*/
-           XXXX,      KC_SCLN,      GRV,      KC_GRV,      QUOT,      KC_MINS,                  KC_PLUS,    OS_SHFT,    OS_CTRL,    OS_ALT,     OS_CMD,      XXXX,
+    /* │           │     <     │     >     │     '     │     "     │     -     │             │     +     │STICK SHIFT│STICKY CTRL│STICKY ALT │STICKY WIN │     \     │*/
+          _______,  RALT(KC_O), RALT(KC_P),   KC_GRV,      QUOT,      KC_MINS,                  KC_PLUS,    OS_SHFT,    OS_CTRL,    OS_ALT,     OS_CMD,       BSL,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │           │     [     │     ]     │     ;     │     ,     │     _     │             │     =     │     .     │     :     │     \     │     |     │     /     │*/
-           XXXX,      KC_LBRC,    KC_RBRC,     SCLN,      KC_LBRC,    KC_UNDS,                   KC_EQL,    KC_RBRC,      CLN,        BSL,       PIPE,      KC_BSLS,
+    /* │           │     [     │     ]     │     ;     │     ,     │     _     │             │     =     │     .     │     :     │     {     │     }     │     /     │*/
+          _______, RALT(KC_DOT),RALT(KC_SLSH), SCLN,      KC_BSLS,    KC_UNDS,                   KC_EQL,    KC_RBRC,      CLN,      LBRACE,      RBRACE,    KC_NUBS,
     /* └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘             └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘*/
     /*                                          ┌───────────┬───────────┬───────────┐   ┌───────────┬───────────┐                                                     */
     /*                                          │           │           │           │   │           │           │                                                     */
@@ -172,16 +174,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NAV] = LAYOUT_main(
     /* ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐             ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐*/
     /* │           │           │           │           │           │           │             │           │           │           │           │           │           │*/  
-           XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,                     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,
+          C(KC_Z),     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,                     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │           │ SWAP TAB  │ SWAP WIN  │ PREV TAB  │ NEXT TAB  │    ESC    │             │    ESC    │   HOME    │     UP    │    END    │  Delete   │           │*/        
-           XXXX,      SW_TAB,     SW_WIN,      TAB_L,     TAB_R,      KC_ESC,                   KC_ESC,     KC_HOME,     KC_UP,     KC_END,     KC_DEL,      XXXX,
+          C(KC_X),    SW_TAB,     SW_WIN,      TAB_L,     TAB_R,      KC_DEL,                   KC_BSPC,    KC_HOME,     KC_UP,     KC_END,     KC_DEL,      XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │           │STICKY WIN │STICKY ALT │STICKY CTRL│STICK SHIFT│   ENTER   │             │   ENTER   │   LEFT    │   DOWN    │   RIGHT   │ Backspace │           │*/
-           XXXX,      OS_CMD,     OS_ALT,     OS_CTRL,    OS_SHFT,    KC_ENT,                   KC_ENT,    KC_LEFT,     KC_DOWN,    KC_RGHT,    KC_BSPC,     XXXX,
+          C(KC_C),    OS_CMD,     OS_ALT,     OS_CTRL,    OS_SHFT,    KC_ENT,                   KC_ENT,    KC_LEFT,     KC_DOWN,    KC_RGHT,    KC_BSPC,     XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │           │SPACE LEFT │SPACE RIGHT│GAME LAYER │ PRNT SCRN │    TAB    │             │    TAB    │  PAGE UP  │ PAGE DOWN │           │  NUM LOCK │           │*/
-           XXXX,      SPACE_L,   SPACE_R,    DF(_GAM),    KC_PSCR,    KC_TAB,                   KC_TAB,     KC_PGUP,    KC_PGDN,    KC_QUOT,     KC_NUM,     XXXX,
+          C(KC_V),    SPACE_L,    SPACE_R,   DF(_GAM),    KC_PSCR,    KC_TAB,                   KC_TAB,     KC_PGUP,    KC_PGDN,    KC_QUOT,     KC_NUM,     XXXX,
     /* └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘             └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘*/
     /*                                          ┌───────────┬───────────┬───────────┐   ┌───────────┬───────────┐                                                     */
     /*                                          │           │ CMD LAYER │           │   │           │           │                                                     */
@@ -221,10 +223,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,                     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │           │     1     │     2     │     3     │     4     │     5     │             │     6     │     7     │     8     │     9     │     0     │           │*/        
-           XXXX,       KC_P1,      KC_P2,      KC_P3,      KC_P4,      KC_P5,                    KC_P6,      KC_P7,      KC_P8,      KC_P9,      KC_P0,      XXXX,
+           XXXX,       KC_1,       KC_2,       KC_3,       KC_4,       KC_5,                     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │           │STICKY WIN │STICKY ALT │STICKY CTRL│STICK SHIFT│    F11    │             │    F12    │STICK SHIFT│STICKY CTRL│STICKY ALT │STICKY WIN │           │           │*/
-           XXXX,      OS_CMD,     OS_ALT,     OS_CTRL,    OS_SHFT,    KC_F11,                    KC_F12,    OS_SHFT,    OS_CTRL,    OS_ALT,     OS_CMD,      XXXX,
+    /* │    F11    │STICKY WIN │STICKY ALT │STICKY CTRL│STICK SHIFT│     ,     │             │     ,     │STICK SHIFT│STICKY CTRL│STICKY ALT │STICKY WIN │    F12    │           │*/
+          KC_F11,     OS_CMD,     OS_ALT,     OS_CTRL,    OS_SHFT,    KC_PDOT,                  KC_PDOT,    OS_SHFT,    OS_CTRL,    OS_ALT,     OS_CMD,      KC_F12,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │           │     F1    │     F2    │     F3    │     F4    │     F5    │             │     F6    │     F7    │     F8    │     F9    │    F10    │           │*/
            XXXX,       KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,                    KC_F6,      KC_F7,      KC_F8,      KC_F9,     KC_F10,      XXXX,

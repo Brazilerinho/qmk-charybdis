@@ -111,8 +111,8 @@
 #define RGB_MATRIX_LED_FLUSH_LIMIT 16 // limits in milliseconds how frequently an animation will update the LEDs. 16 (16ms) is equivalent to limiting to 60fps (increases keyboard responsiveness)
 #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200 // limits maximum brightness of LEDs to 200 out of 255. If not defined maximum brightness is set to 255
 #define RGB_MATRIX_DEFAULT_ON true // Sets the default enabled state, if none has been set
-#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_STARLIGHT // Sets the default mode, if none has been set
-#define RGB_MATRIX_DEFAULT_HUE 0 // Sets the default hue value, if none has been set
+#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_RIVERFLOW //RGB_MATRIX_BAND_PINWHEEL_VAL // Sets the default mode, if none has been set
+#define RGB_MATRIX_DEFAULT_HUE 123 // Sets the default hue value, if none has been set
 #define RGB_MATRIX_DEFAULT_SAT 255 // Sets the default saturation value, if none has been set
 #define RGB_MATRIX_DEFAULT_VAL 100 // Sets the default brightness value, if none has been set
 #define RGB_MATRIX_DEFAULT_SPD 127 // Sets the default animation speed, if none has been set
