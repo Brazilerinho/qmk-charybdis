@@ -70,8 +70,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_BTN3,     KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,                     KC_N,       KC_M,      KC_COMM,    KC_DOT,     KC_SLSH,    KC_RBRC,
     /* └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘             └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘*/
     /*                                          ┌───────────┬───────────┬───────────┐   ┌───────────┬───────────┐                                                     */
-    /*                                          │    NAV    │   SPACE   │ MOUSE LEFT│   │ ENT/RIGHT │   SHIFT   │                                                     */
-                                                   LA_NAV,     KC_SPC,     KC_BTN1,        LA_SYM,     KC_LSFT,
+    /*                                          │    NAV    │   SPACE   │ MOUSE LEFT│   │   SHIFT   │    SYM    │                                                     */
+                                                   LA_NAV,     KC_SPC,     KC_BTN1,        KC_LSFT,     LA_SYM,     
     /*                                          └───────────┼───────────┼───────────┤   ├───────────┼───────────┘                                                     */
     /*                                                      │ CAPS LOCK │MOUSE RIGHT│   │    ALT    │                                                                 */
                                                                KC_CAPS,    KC_BTN2,         LA_ALT
@@ -268,7 +268,7 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
 
 // Modify these values to adjust the scrolling speed
 #define SCROLL_DIVISOR_H 64.0
-#define SCROLL_DIVISOR_V 64.0
+#define SCROLL_DIVISOR_V 45.0
  
 // Variables to store accumulated scroll values
 float scroll_accum_h = 0.0;
@@ -369,6 +369,11 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
         RGB_MATRIX_INDICATOR_SET_COLOR(29, 0, bright, 0);
     default:
         break;
+    }
+
+    if (host_keyboard_led_state().caps_lock) {
+        RGB_MATRIX_INDICATOR_SET_COLOR(4, 0, bright, 0);
+        RGB_MATRIX_INDICATOR_SET_COLOR(30, 0, bright, 0);
     }
 
     return false;

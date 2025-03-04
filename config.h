@@ -40,7 +40,7 @@
 #define POINTING_DEVICE_CS_PIN GP17
 
 #define POINTING_DEVICE_INVERT_X
-#define PMW33XX_CPI 1000
+#define PMW33XX_CPI 600
 #define PMW33XX_LIFTOFF_DISTANCE 0x02
 #define ROTATIONAL_TRANSFORM_ANGLE -45
 
@@ -112,9 +112,9 @@
 #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200 // limits maximum brightness of LEDs to 200 out of 255. If not defined maximum brightness is set to 255
 #define RGB_MATRIX_DEFAULT_ON true // Sets the default enabled state, if none has been set
 #define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_RIVERFLOW //RGB_MATRIX_BAND_PINWHEEL_VAL // Sets the default mode, if none has been set
-#define RGB_MATRIX_DEFAULT_HUE 123 // Sets the default hue value, if none has been set
+#define RGB_MATRIX_DEFAULT_HUE 105 // Sets the default hue value, if none has been set
 #define RGB_MATRIX_DEFAULT_SAT 255 // Sets the default saturation value, if none has been set
-#define RGB_MATRIX_DEFAULT_VAL 100 // Sets the default brightness value, if none has been set
+#define RGB_MATRIX_DEFAULT_VAL 200 // Sets the default brightness value, if none has been set
 #define RGB_MATRIX_DEFAULT_SPD 127 // Sets the default animation speed, if none has been set
 #define RGB_MATRIX_DEFAULT_FLAGS LED_FLAG_ALL // Sets the default LED flags, if none has been set
 #define RGB_MATRIX_SPLIT { 29, 27 }
