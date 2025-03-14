@@ -260,6 +260,7 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
     case OS_CTRL:
     case OS_ALT:
     case OS_CMD:
+    case KC_BTN1:
         return true;
     default:
         return false;
@@ -372,8 +373,8 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     }
 
     if (host_keyboard_led_state().caps_lock) {
-        RGB_MATRIX_INDICATOR_SET_COLOR(4, 0, bright, 0);
-        RGB_MATRIX_INDICATOR_SET_COLOR(30, 0, bright, 0);
+        RGB_MATRIX_INDICATOR_SET_COLOR(28, 0, bright, 0);
+        RGB_MATRIX_INDICATOR_SET_COLOR(35, 0, bright, 0);
     }
 
     return false;
