@@ -63,8 +63,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_EN] = LAYOUT_main(
     /* ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐             ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐*/
-    /* │     `     │           │           │           │           │           │             │           │           │           │           │           │           │*/  
-          KC_GRV,      XXXX,       XXXX,       XXXX,       XXXX,       XXXX,                     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,
+    /* │           │           │           │MEDIA PREV │MEDIA NEXT │MEDIA PAUSE│             │    VOL-   │    VOL+   │    MUTE   │           │           │           │*/  
+            XXXX,      XXXX,       XXXX,      KC_MPRV,    KC_MNXT,    KC_MPLY,                  KC_VOLD,    KC_VOLU,    KC_MUTE,     XXXX,      KC_PSCR,     XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │    TAB    │     Q     │     W     │     E     │     R     │     T     │             │     Y     │     U     │     I     │     O     │     P     │     [     │*/        
           KC_TAB,      EN_Q,       EN_W,       EN_E,       EN_R,       EN_T,                     EN_Y,       EN_U,       EN_I,       EN_O,       EN_P,      EN_LBRC,
@@ -86,8 +86,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_EN_S] = LAYOUT_main(
     /* ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐             ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐*/
-    /* │     `     │           │           │           │           │           │             │           │           │           │           │           │           │*/  
-            KC_GRV,      XXXX,       XXXX,       XXXX,       XXXX,       XXXX,                     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,
+    /* │           │           │           │MEDIA PREV │MEDIA NEXT │MEDIA PAUSE│             │    VOL-   │    VOL+   │    MUTE   │           │           │           │*/  
+            XXXX,      XXXX,       XXXX,      KC_MPRV,    KC_MNXT,    KC_MPLY,                  KC_VOLD,    KC_VOLU,    KC_MUTE,     XXXX,      KC_PSCR,     XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │    TAB    │     Q     │     W     │     E     │     R     │     T     │             │     Y     │     U     │     I     │     O     │     P     │     {     │*/        
           KC_TAB,     EN_S_Q,     EN_S_W,     EN_S_E,     EN_S_R,     EN_S_T,                   EN_S_Y,     EN_S_U,     EN_S_I,     EN_S_O,     EN_S_P,     EN_LCBR,
@@ -109,8 +109,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_RU] = LAYOUT_main(
     /* ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐             ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐*/
-    /* │     `     │           │           │           │           │           │             │           │           │           │           │           │           │*/  
-            KC_GRV,      XXXX,       XXXX,       XXXX,       XXXX,       XXXX,                     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,
+    /* │           │           │           │MEDIA PREV │MEDIA NEXT │MEDIA PAUSE│             │    VOL-   │    VOL+   │    MUTE   │           │           │           │*/  
+            XXXX,      XXXX,       XXXX,      KC_MPRV,    KC_MNXT,    KC_MPLY,                  KC_VOLD,    KC_VOLU,    KC_MUTE,     XXXX,      KC_PSCR,     XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │    TAB    │     Й     │     Ц     │     У     │     К     │     Е     │             │     Н     │     Г     │     Ш     │     Щ     │     З     │     Х     │*/        
           KC_TAB,      RU_J,       RU_TS,      RU_U,       RU_K,       RU_JE,                    RU_N,       RU_G,       RU_SH,      RU_SC,      RU_Z,       RU_H,
@@ -132,8 +132,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_RU_S] = LAYOUT_main(
     /* ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐             ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐*/
-    /* │     `     │           │           │           │           │           │             │           │           │           │           │           │           │*/  
-            KC_GRV,      XXXX,       XXXX,       XXXX,       XXXX,       XXXX,                     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,
+    /* │           │           │           │MEDIA PREV │MEDIA NEXT │MEDIA PAUSE│             │    VOL-   │    VOL+   │    MUTE   │           │           │           │*/  
+            XXXX,      XXXX,       XXXX,      KC_MPRV,    KC_MNXT,    KC_MPLY,                  KC_VOLD,    KC_VOLU,    KC_MUTE,     XXXX,      KC_PSCR,     XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │    TAB    │     Й     │     Ц     │     У     │     К     │     Е     │             │     Н     │     Г     │     Ш     │     Щ     │     З     │     Х     │*/        
           KC_TAB,     RU_S_J,     RU_S_TS,    RU_S_U,     RU_S_K,     RU_S_JE,                  RU_S_N,     RU_S_G,     RU_S_SH,    RU_S_SC,    RU_S_Z,     RU_S_H,
@@ -158,10 +158,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* │    ESC    │     1     │     2     │     3     │     4     │     5     │             │     6     │     7     │     8     │     9     │     0     │  VOLUME+  │*/
           KC_ESC,      KC_1,       KC_2,       KC_3,       KC_4,       KC_5,                     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,      KC_VOLU,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │    TAB    │    TAB    │     Q     │     W     │     E     │     R     │             │     F1    │    HOME   │     UP    │    END    │     F9    │  VOLUME-  │*/
+    /* │    TAB    │    TAB    │     Q     │     W     │     E     │     R     │             │     F1    │    HOME   │     ↑     │    END    │     F9    │  VOLUME-  │*/
           KC_TAB,     KC_TAB,      KC_Q,       KC_W,       KC_E,       KC_R,                     KC_F1,     KC_HOME,     KC_UP,      KC_END,     KC_F9,     KC_VOLD,        
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │      H    │   SHIFT   │     A     │     S     │     D     │     F     │             │     F2    │    LEFT   │    DOWN   │   RIGHT   │     F8    │    F10    │*/
+    /* │      H    │   SHIFT   │     A     │     S     │     D     │     F     │             │     F2    │     ←     │     ↓     │     →     │     F8    │    F10    │*/
             KC_H,     KC_LSFT,     KC_A,       KC_S,       KC_D,       KC_F,                     KC_F2,     KC_LEFT,    KC_DOWN,    KC_RGHT,     KC_F8,      KC_F10,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │      N    │    CTRL   │     Z     │     X     │     C     │     V     │             │     F3    │     F4    │     F5    │     F6    │     F7    │  TOG GAME │*/
@@ -202,17 +202,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_SYM] = LAYOUT_main(
     /* ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐             ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐*/
-    /* │     `     │           │           │           │           │           │             │           │           │           │           │           │           │*/  
-            GRV,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,                     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,
+    /* │           │           │           │           │           │           │             │           │           │           │           │           │           │*/  
+           XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,                     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │           │     !     │     @     │     #     │     $     │     %     │             │     ^     │     ?     │     *     │     (     │     )     │     |     │*/        
-          _______,    AG_EXCL,     EN_AT,    S(KC_3),     EN_DLR,     AG_PERC,                  EN_CIRC,    AG_QUES,    AG_ASTR,    AG_LPRN,   AG_RPRN,     EN_PIPE,
+    /* │     `     │     !     │     @     │     #     │     $     │     %     │             │     ^     │     ?     │     *     │     (     │     )     │     |     │*/        
+           EN_GRV,    AG_EXCL,     EN_AT,    S(KC_3),     EN_DLR,     AG_PERC,                  EN_CIRC,    AG_QUES,    AG_ASTR,    AG_LPRN,   AG_RPRN,     EN_PIPE,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │           │     <     │     >     │     '     │     "     │     -     │             │     +     │STICK SHIFT│STICKY CTRL│STICKY ALT │STICKY WIN │     \     │*/
-          _______,     EN_LT,      EN_GT,     EN_QUOT,    AG_DQUO,    AG_MINS,                  AG_PLUS,    OS_SHFT,    OS_CTRL,    OS_ALT,     OS_CMD,     AG_BSLS,
+    /* │     ~     │     '     │     [     │     ]     │     ,     │     -     │             │     +     │     .     │     )     │     (     │     "     │     \     │*/
+          EN_TILD,    EN_QUOT,    EN_LBRC,    EN_RBRC,    AG_COMM,    AG_MINS,                  AG_PLUS,    AG_DOT,     AG_RPRN,    AG_LPRN,    AG_DQUO,    AG_BSLS,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │           │     [     │     ]     │     ;     │     ,     │     _     │             │     =     │     .     │     :     │     {     │     }     │     /     │*/
-          _______,    EN_LBRC,    EN_RBRC,    AG_SCLN,    AG_COMM,    AG_UNDS,                  AG_EQL,     AG_DOT,     AG_COLN,    EN_LCBR,    EN_RCBR,    AG_SLSH,
+    /* │           │     &     │     <     │     >     │     ;     │     _     │             │     =     │     :     │     }     │     {     │     "     │     /     │*/
+          _______,    EN_AMPR,     EN_LT,      EN_GT,     AG_SCLN,    AG_UNDS,                  AG_EQL,     AG_COLN,    EN_RCBR,    EN_LCBR,    AG_DQUO,    AG_SLSH,
     /* └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘             └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘*/
     /*                                          ┌───────────┬───────────┬───────────┐   ┌───────────┬───────────┐                                                     */
     /*                                          │           │           │           │   │           │           │                                                     */
@@ -239,7 +239,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘             └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘*/
     /*                                          ┌───────────┬───────────┬───────────┐   ┌───────────┬───────────┐                                                     */
     /*                                          │           │           │           │   │           │           │                                                     */
-                                                   _______,    _______,      _______,        _______,    _______,
+                                                   _______,    _______,    _______,        _______,    _______,
     /*                                          └───────────┼───────────┼───────────┤   ├───────────┼───────────┘                                                     */
     /*                                                      │           │           │   │           │                                                                 */
                                                                _______,    _______,        _______
@@ -251,18 +251,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* │           │           │           │           │           │           │             │           │           │           │           │           │           │*/  
           C(KC_Z),     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,                     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │           │ SWAP TAB  │ SWAP WIN  │ PREV TAB  │ NEXT TAB  │    ESC    │             │ Backspace │   HOME    │     UP    │    END    │           │ Backspace │*/        
-          C(KC_X),    SW_TAB,     SW_WIN,      TAB_L,     TAB_R,      KC_DEL,                   KC_BSPC,    KC_HOME,     KC_UP,     KC_END,      XXXX,      KC_BSPC,
+    /* │           │ SWAP TAB  │ SWAP WIN  │ PREV TAB  │ NEXT TAB  │    ESC    │             │           │   HOME    │     ↑     │    END    │           │ Backspace │*/        
+          C(KC_X),    SW_TAB,     SW_WIN,      TAB_L,     TAB_R,      KC_DEL,                    XXXX,      KC_HOME,     KC_UP,     KC_END,      XXXX,      KC_BSPC,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │           │STICKY WIN │STICKY ALT │STICKY CTRL│STICK SHIFT│   ENTER   │             │   ENTER   │   LEFT    │   DOWN    │   RIGHT   │           │           │*/
+    /* │           │STICKY WIN │STICKY ALT │STICKY CTRL│STICK SHIFT│   ENTER   │             │   ENTER   │     ←     │     ↓     │     →     │           │           │*/
           C(KC_C),    OS_CMD,     OS_ALT,     OS_CTRL,    OS_SHFT,    KC_ENT,                   KC_ENT,    KC_LEFT,     KC_DOWN,    KC_RGHT,     XXXX,       XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │           │    UNDO   │SPACE LEFT │SPACE RIGHT│ PRNT SCRN │    TAB    │             │    TAB    │  PAGE UP  │ PAGE DOWN │           │  NUM LOCK │GAME LAYER │*/
-          C(KC_V),    C(KC_Z),    SPACE_L,   SPACE_R,    KC_PSCR,     KC_TAB,                   KC_TAB,     KC_PGUP,    KC_PGDN,    KC_QUOT,     KC_NUM,   TG(_GAM),
+    /* │           │    UNDO   │SPACE LEFT │SHFT+CTRL+C│SHFT+CTRL+↓│    TAB    │             │ Backspace │  PAGE UP  │ PAGE DOWN │           │  NUM LOCK │GAME LAYER │*/
+          C(KC_V),    C(KC_Z),    SPACE_L,  C(S(KC_C)),C(S(KC_DOWN)), KC_TAB,                   KC_BSPC,    KC_PGUP,    KC_PGDN,    KC_QUOT,     KC_NUM,   TG(_GAM),
     /* └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘             └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘*/
     /*                                          ┌───────────┬───────────┬───────────┐   ┌───────────┬───────────┐                                                     */
-    /*                                          │           │           │ CMD LAYER │   │           │           │                                                     */
-                                                   _______,    _______,    LA_CMD,         _______,    _______,
+    /*                                          │           │           │ CMD LAYER │   │CTRL+SPACE │           │                                                     */
+                                                   _______,    _______,    LA_CMD,        C(KC_SPC),   _______,
     /*                                          └───────────┼───────────┼───────────┤   ├───────────┼───────────┘                                                     */
     /*                                                      │           │           │   │           │                                                                 */
                                                                _______,    _______,        _______
