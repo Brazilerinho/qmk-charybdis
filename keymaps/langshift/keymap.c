@@ -57,14 +57,17 @@ enum keycodes {
 
     SW_WIN,  // Switch to next window         (alt-tab)
     SW_TAB,  // Switch to next browser tab    (ctrl-tab)
+
+    RGB_BRU,
+    RGB_BRD
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_EN] = LAYOUT_main(
     /* ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐             ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐*/
-    /* │           │           │           │MEDIA PREV │MEDIA NEXT │MEDIA PAUSE│             │    VOL-   │    VOL+   │    MUTE   │           │           │           │*/  
-            XXXX,      XXXX,       XXXX,      KC_MPRV,    KC_MNXT,    KC_MPLY,                  KC_VOLD,    KC_VOLU,    KC_MUTE,     XXXX,      KC_PSCR,     XXXX,
+    /* │    ESC    │     _     │     (     │     )     │     ,     │     -     │             │      +    │     .     │     =     │     :     │     ;     │ BACKSPACE │*/  
+          KC_ESC,     AG_UNDS,    AG_LPRN,    AG_RPRN,    AG_COMM,    AG_MINS,                  AG_PLUS,    AG_DOT,     AG_EQL,     AG_COLN,    AG_SCLN,    KC_BSPC,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │    TAB    │     Q     │     W     │     E     │     R     │     T     │             │     Y     │     U     │     I     │     O     │     P     │     [     │*/        
           KC_TAB,      EN_Q,       EN_W,       EN_E,       EN_R,       EN_T,                     EN_Y,       EN_U,       EN_I,       EN_O,       EN_P,      EN_LBRC,
@@ -86,8 +89,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_EN_S] = LAYOUT_main(
     /* ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐             ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐*/
-    /* │           │           │           │MEDIA PREV │MEDIA NEXT │MEDIA PAUSE│             │    VOL-   │    VOL+   │    MUTE   │           │           │           │*/  
-            XXXX,      XXXX,       XXXX,      KC_MPRV,    KC_MNXT,    KC_MPLY,                  KC_VOLD,    KC_VOLU,    KC_MUTE,     XXXX,      KC_PSCR,     XXXX,
+    /* │    ESC    │     1     │     2     │     3     │     4     │     5     │             │     6     │     7     │     8     │     9     │     0     │ BACKSPACE │*/  
+          KC_ESC,      KC_1,       KC_2,       KC_3,       KC_4,       KC_5,                     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,      KC_BSPC,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │    TAB    │     Q     │     W     │     E     │     R     │     T     │             │     Y     │     U     │     I     │     O     │     P     │     {     │*/        
           KC_TAB,     EN_S_Q,     EN_S_W,     EN_S_E,     EN_S_R,     EN_S_T,                   EN_S_Y,     EN_S_U,     EN_S_I,     EN_S_O,     EN_S_P,     EN_LCBR,
@@ -109,8 +112,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_RU] = LAYOUT_main(
     /* ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐             ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐*/
-    /* │           │           │           │MEDIA PREV │MEDIA NEXT │MEDIA PAUSE│             │    VOL-   │    VOL+   │    MUTE   │           │           │           │*/  
-            XXXX,      XXXX,       XXXX,      KC_MPRV,    KC_MNXT,    KC_MPLY,                  KC_VOLD,    KC_VOLU,    KC_MUTE,     XXXX,      KC_PSCR,     XXXX,
+    /* │    ESC    │     _     │     (     │     )     │     ,     │     -     │             │      +    │     .     │     =     │     :     │     ;     │ BACKSPACE │*/  
+          KC_ESC,     AG_UNDS,    AG_LPRN,    AG_RPRN,    AG_COMM,    AG_MINS,                  AG_PLUS,    AG_DOT,     AG_EQL,     AG_COLN,    AG_SCLN,    KC_BSPC,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │    TAB    │     Й     │     Ц     │     У     │     К     │     Е     │             │     Н     │     Г     │     Ш     │     Щ     │     З     │     Х     │*/        
           KC_TAB,      RU_J,       RU_TS,      RU_U,       RU_K,       RU_JE,                    RU_N,       RU_G,       RU_SH,      RU_SC,      RU_Z,       RU_H,
@@ -132,8 +135,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_RU_S] = LAYOUT_main(
     /* ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐             ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐*/
-    /* │           │           │           │MEDIA PREV │MEDIA NEXT │MEDIA PAUSE│             │    VOL-   │    VOL+   │    MUTE   │           │           │           │*/  
-            XXXX,      XXXX,       XXXX,      KC_MPRV,    KC_MNXT,    KC_MPLY,                  KC_VOLD,    KC_VOLU,    KC_MUTE,     XXXX,      KC_PSCR,     XXXX,
+    /* │    ESC    │     1     │     2     │     3     │     4     │     5     │             │     6     │     7     │     8     │     9     │     0     │ BACKSPACE │*/
+          KC_ESC,      KC_1,       KC_2,       KC_3,       KC_4,       KC_5,                     KC_6,       KC_7,       KC_8,       KC_9,       KC_0,      KC_BSPC,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │    TAB    │     Й     │     Ц     │     У     │     К     │     Е     │             │     Н     │     Г     │     Ш     │     Щ     │     З     │     Х     │*/        
           KC_TAB,     RU_S_J,     RU_S_TS,    RU_S_U,     RU_S_K,     RU_S_JE,                  RU_S_N,     RU_S_G,     RU_S_SH,    RU_S_SC,    RU_S_Z,     RU_S_H,
@@ -168,8 +171,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_N,     KC_LCTL,     KC_Z,       KC_X,       KC_C,       KC_V,                     KC_F3,      KC_F4,      KC_F5,      KC_F6,      KC_F7,     TG(_GAM),
     /* └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘             └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘*/
     /*                                          ┌───────────┬───────────┬───────────┐   ┌───────────┬───────────┐                                                     */
-    /*                                          │    ALT    │   SPACE   │     G     │   │   ENTER   │   BKSPC   │                                                     */
-                                                   KC_LALT,    KC_SPC,      KC_G,          KC_ENT,     KC_BSPC,
+    /*                                          │     G     │    ALT    │   SPACE   │   │   ENTER   │   BKSPC   │                                                     */
+                                                    KC_G,      KC_LALT,    KC_SPC,         KC_ENT,     KC_BSPC,
     /*                                          └───────────┼───────────┼───────────┤   ├───────────┼───────────┘                                                     */
     /*                                                      │      T    │     B     │   │ WIN+CTRL+V│                                                                 */
                                                                  KC_T,      KC_B,         C(G(KC_V))
@@ -254,34 +257,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* │           │ SWAP TAB  │ SWAP WIN  │ PREV TAB  │ NEXT TAB  │    ESC    │             │           │   HOME    │     ↑     │    END    │           │ Backspace │*/        
           C(KC_X),    SW_TAB,     SW_WIN,      TAB_L,     TAB_R,      KC_DEL,                    XXXX,      KC_HOME,     KC_UP,     KC_END,      XXXX,      KC_BSPC,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │           │STICKY WIN │STICKY ALT │STICKY CTRL│STICK SHIFT│   ENTER   │             │   ENTER   │     ←     │     ↓     │     →     │           │           │*/
-          C(KC_C),    OS_CMD,     OS_ALT,     OS_CTRL,    OS_SHFT,    KC_ENT,                   KC_ENT,    KC_LEFT,     KC_DOWN,    KC_RGHT,     XXXX,       XXXX,
+    /* │           │STICKY WIN │STICKY ALT │STICKY CTRL│STICK SHIFT│   ENTER   │             │ CTRL + ←  │     ←     │     ↓     │     →     │ CTRL + →  │           │*/
+          C(KC_C),    OS_CMD,     OS_ALT,     OS_CTRL,    OS_SHFT,    KC_ENT,                 C(KC_LEFT),   KC_LEFT,    KC_DOWN,    KC_RGHT,  C(KC_RGHT),    KC_ENT,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
-    /* │           │    UNDO   │SPACE LEFT │SHFT+CTRL+C│SHFT+CTRL+↓│    TAB    │             │ Backspace │  PAGE UP  │ PAGE DOWN │           │  NUM LOCK │GAME LAYER │*/
-          C(KC_V),    C(KC_Z),    SPACE_L,  C(S(KC_C)),C(S(KC_DOWN)), KC_TAB,                   KC_BSPC,    KC_PGUP,    KC_PGDN,    KC_QUOT,     KC_NUM,   TG(_GAM),
+    /* │           │    UNDO   │SPACE LEFT │SHFT+CTRL+C│SHFT+CTRL+↓│    TAB    │             │           │  PAGE UP  │           │ PAGE DOWN │  NUM LOCK │           │*/
+          C(KC_V),    C(KC_Z),    SPACE_L,  C(S(KC_C)),C(S(KC_DOWN)), KC_TAB,                  C(KC_SPC),   KC_PGUP,     XXXX,      KC_PGDN,     KC_NUM,     KC_ENT,
     /* └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘             └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘*/
     /*                                          ┌───────────┬───────────┬───────────┐   ┌───────────┬───────────┐                                                     */
-    /*                                          │           │           │ CMD LAYER │   │CTRL+SPACE │           │                                                     */
-                                                   _______,    _______,    LA_CMD,        C(KC_SPC),   _______,
+    /*                                          │GAME LAYER │           │  VOLUME+  │   │ BACKSPACE │           │                                                     */
+                                                  TG(_GAM),    _______,    KC_VOLU,        KC_BSPC,    _______,
     /*                                          └───────────┼───────────┼───────────┤   ├───────────┼───────────┘                                                     */
-    /*                                                      │           │           │   │           │                                                                 */
-                                                               _______,    _______,        _______
+    /*                                                      │MEDIA PAUSE│  VOLUME-  │   │ CMD LAYER │                                                                 */
+                                                               KC_MPLY,    KC_VOLD,        LA_CMD
     /*                                                      └───────────┴───────────┘   └───────────┘                                                                 */
     ),
 
     [_CMD] = LAYOUT_main(
     /* ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐             ┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐*/
     /* │           │           │           │           │           │           │             │           │           │           │           │           │           │*/  
-           XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,                     XXXX,       XXXX,       XXXX,       XXXX,       XXXX,       XXXX,
+           XXXX,       XXXX,      RGB_SPD,    RGB_SPI,    RGB_BRD,    RGB_BRU,                  RGB_RMOD,   RGB_MOD,      XXXX,       XXXX,       XXXX,       XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │           │           │           │           │           │           │             │           │           │           │           │           │           │*/  
-           XXXX,     MEH(KC_Q),  MEH(KC_W),  MEH(KC_E),  MEH(KC_R), C(S(KC_UP)),               MEH(KC_Y),   KC_VOLD,    KC_MUTE,    KC_VOLU,   MEH(KC_P),    XXXX,
+           XXXX,     MEH(KC_Q),  MEH(KC_W),  MEH(KC_E),  MEH(KC_R), C(S(KC_UP)),               MEH(KC_Y),   KC_VOLD,    KC_MUTE,    KC_VOLU,   MEH(KC_P),     XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │           │     ~     │           │     '     │     "     │     -     │             │     +     │MEDIA PREV │MEDIA PAUSE│MEDIA NEXT │           │           │*/
-           XXXX,     MEH(KC_A),  MEH(KC_S),  MEH(KC_D),  MEH(KC_F),C(S(KC_DOWN)),              MEH(KC_H),   KC_MPRV,    KC_MPLY,    KC_MNXT,  MEH(KC_SCLN),  XXXX,
+           XXXX,     MEH(KC_A),  MEH(KC_S),  MEH(KC_D),  MEH(KC_F),C(S(KC_DOWN)),              MEH(KC_H),   KC_MPRV,    KC_MPLY,    KC_MNXT,  MEH(KC_SCLN),   XXXX,
     /* ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤             ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤*/
     /* │           │     \     │           │     ;     │     ,     │     _     │             │     =     │     .     │     :     │     |     │     /     │           │*/
-           XXXX,     MEH(KC_Z),  MEH(KC_X),  MEH(KC_C),  MEH(KC_V),  C(S(KC_C)),               MEH(KC_N),  MEH(KC_M),MEH(KC_COMM),MEH(KC_DOT),MEH(KC_SLSH),  XXXX,
+           XXXX,     MEH(KC_Z),  MEH(KC_X),  MEH(KC_C),  MEH(KC_V),  C(S(KC_C)),               MEH(KC_N),  MEH(KC_M),MEH(KC_COMM),MEH(KC_DOT),MEH(KC_SLSH),   XXXX,
     /* └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘             └───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘*/
     /*                                          ┌───────────┬───────────┬───────────┐   ┌───────────┬───────────┐                                                     */
     /*                                          │           │           │           │   │    WIN    │           │                                                     */
@@ -316,6 +319,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
+uint8_t current_val = RGB_MATRIX_DEFAULT_VAL;
+uint8_t active_hue = 105;
+uint8_t active_val = RGB_MATRIX_DEFAULT_VAL;
+uint8_t active_sat = RGB_MATRIX_DEFAULT_SAT;
+
+void set_layer_hsv(uint8_t hue, uint8_t sat, uint8_t val) 
+{
+    if ((hue == active_hue) && (val == active_val) && (sat == active_sat)) 
+        return;
+    
+    rgb_matrix_sethsv_noeeprom(hue, sat, val); 
+    active_hue = hue;
+    active_val = val;
+    active_sat = sat;
+};
+
+
 bool is_oneshot_cancel_key(uint16_t keycode) {
     switch (keycode) {
     case LA_SYM:
@@ -342,6 +362,22 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
     }
 }
 
+void brightness_increase(void) {
+    if (current_val >= RGB_MATRIX_MAXIMUM_BRIGHTNESS) 
+        return;
+
+    rgb_matrix_increase_val();
+    current_val = rgb_matrix_get_val();
+};
+
+void brightness_decrease(void) {
+    if (current_val <= 0) 
+        return;
+
+    rgb_matrix_decrease_val();
+    current_val = rgb_matrix_get_val();
+};
+
 // Modify these values to adjust the scrolling speed
 #define SCROLL_DIVISOR_H 64.0
 #define SCROLL_DIVISOR_V 45.0
@@ -350,8 +386,10 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
 float scroll_accum_h = 0.0;
 float scroll_accum_v = 0.0;
 
-bool scroll_active = false;
+float volume_accum = 0.0;
 
+bool scroll_active = false;
+bool volume_active = false;
 
 bool sw_win_active = false;
 bool sw_tab_active = false;
@@ -393,6 +431,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         keycode, record
     );
 
+    pressactivator(
+        &volume_active, LA_SYM,
+        keycode, record
+    );
+
+    if (keycode == RGB_BRU && !(record->event.pressed))
+        brightness_increase();
+
+    if (keycode == RGB_BRD && !(record->event.pressed))
+        brightness_decrease();
+
     if (!lang_shift_process_record(keycode, record))
         return false;
 
@@ -419,8 +468,19 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
         &mouse_report
     );
 
+    vertical_key_tapper(
+        volume_active, SCROLL_DIVISOR_V,
+        &volume_accum, KC_VOLU, KC_VOLD, 
+        &mouse_report 
+    );
+
     return mouse_report;
 }
+
+int8_t shft_leds[] = {22, 37};
+int8_t ctrl_leds[] = {18, 41};
+int8_t alt_leds[] = {14, 45};
+int8_t cmd_leds[] = {10, 49};
 
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
@@ -428,40 +488,40 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
     switch (get_highest_layer(layer_state|default_layer_state)) {
         case _EN:
-        rgb_matrix_sethsv_noeeprom(105, RGB_MATRIX_DEFAULT_SAT, RGB_MATRIX_DEFAULT_VAL);
+        set_layer_hsv(105, 255, current_val);
         break;
     case _EN_S:
-        rgb_matrix_sethsv_noeeprom(105, RGB_MATRIX_DEFAULT_SAT, RGB_MATRIX_DEFAULT_VAL / 2);
+        set_layer_hsv(105, 255, current_val / 2);
         break;
     case _RU:
-        rgb_matrix_sethsv_noeeprom(85, RGB_MATRIX_DEFAULT_SAT, RGB_MATRIX_DEFAULT_VAL);
+        set_layer_hsv(85, 255, current_val);
         break;
     case _RU_S:
-        rgb_matrix_sethsv_noeeprom(85, RGB_MATRIX_DEFAULT_SAT, RGB_MATRIX_DEFAULT_VAL / 2);
+        set_layer_hsv(85, 255, current_val / 2);
         break;
     case _NAV:
-        rgb_matrix_sethsv_noeeprom(0, RGB_MATRIX_DEFAULT_SAT, RGB_MATRIX_DEFAULT_VAL);  
+        set_layer_hsv(0, 255, current_val);  
         break;
     case _SYM:
-        rgb_matrix_sethsv_noeeprom(28, RGB_MATRIX_DEFAULT_SAT, RGB_MATRIX_DEFAULT_VAL);  
+        set_layer_hsv(28, 255, current_val);  
         break;
     case _NUM:
-        rgb_matrix_sethsv_noeeprom(43, RGB_MATRIX_DEFAULT_SAT, RGB_MATRIX_DEFAULT_VAL); 
+        set_layer_hsv(43, 255, current_val); 
         break;
     case _GAM:
-        rgb_matrix_sethsv_noeeprom(170, RGB_MATRIX_DEFAULT_SAT, RGB_MATRIX_DEFAULT_VAL); 
+        set_layer_hsv(170, 255, current_val); 
         break;
     case _ALT:
-        rgb_matrix_sethsv_noeeprom(128, RGB_MATRIX_DEFAULT_SAT, RGB_MATRIX_DEFAULT_VAL); 
+        set_layer_hsv(128, 255, current_val); 
         break;
     case _CMD:
-        rgb_matrix_sethsv_noeeprom(213, RGB_MATRIX_DEFAULT_SAT, RGB_MATRIX_DEFAULT_VAL); 
+        set_layer_hsv(213, 255, current_val); 
         break;
     case _GFN:
-        rgb_matrix_sethsv_noeeprom(0, RGB_MATRIX_DEFAULT_SAT, RGB_MATRIX_DEFAULT_VAL); 
+        set_layer_hsv(0, 255, current_val); 
         break;      
     default:
-        rgb_matrix_sethsv_noeeprom(105, RGB_MATRIX_DEFAULT_SAT, RGB_MATRIX_DEFAULT_VAL); 
+        set_layer_hsv(105, 255, current_val); 
         break;
     }
 
@@ -469,6 +529,11 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
         RGB_MATRIX_INDICATOR_SET_COLOR(28, 0, bright, 0);
         RGB_MATRIX_INDICATOR_SET_COLOR(35, 0, bright, 0);
     }
+
+    light_oneshot(&os_shft_state, shft_leds, 2, 0, 0, active_val);
+    light_oneshot(&os_ctrl_state, ctrl_leds, 2, 0, 0, active_val);
+    light_oneshot(&os_alt_state, alt_leds, 2, 0, 0, active_val);
+    light_oneshot(&os_cmd_state, cmd_leds, 2, 0, 0, active_val);
 
     return false;
 }

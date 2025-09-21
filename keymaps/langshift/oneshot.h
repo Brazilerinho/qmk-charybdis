@@ -21,6 +21,25 @@ void update_oneshot(
     keyrecord_t *record
 );
 
+/// @brief Register each oneshot key that you desire to have selected color
+///        of selected leds of RGB Matrix in keymap.c file in the
+///        bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max)
+///        callback
+/// @param state - Pointer to state of oneshot key 
+/// @param leds - Array with numbers of LEDs (look at <your_keyboard>.c file)
+/// @param ledscount - Size of leds array
+/// @param red - Red color part of light to be on during oneshot key is active 
+/// @param green - Green color part of light to be on during oneshot key is active 
+/// @param blue - Blue color part of light to be on during oneshot key is active 
+void light_oneshot(
+    oneshot_state *state,
+    int8_t leds[],
+    size_t ledscount,
+    int8_t red,
+    int8_t green,
+    int8_t blue
+);
+
 // To be implemented by the consumer. Defines keys to cancel oneshot mods.
 bool is_oneshot_cancel_key(uint16_t keycode);
 

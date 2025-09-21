@@ -55,3 +55,20 @@ void update_oneshot(
         }
     }
 }
+
+void light_oneshot(
+    oneshot_state *state,
+    int8_t leds[],
+    size_t ledscount,
+    int8_t red,
+    int8_t green,
+    int8_t blue
+) {
+    if ((*state == os_up_queued))
+    {
+        for (uint8_t i = 0; i < ledscount; i++)
+        {
+            rgb_matrix_set_color(leds[i], red, green, blue);
+        }; 
+    };
+};
